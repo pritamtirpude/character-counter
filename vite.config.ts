@@ -60,9 +60,16 @@ export default defineConfig({
             form_factor: 'wide'
           },
           {
-            src: '/mobile_dark.jpg',
-            sizes: '320x640',
-            type: 'image/jpg'
+            src: '/light_mode_mobile.png',
+            sizes: '540x361',
+            type: 'image/png',
+            form_factor: 'narrow'
+          },
+          {
+            src: '/dark_mode_mobile.png',
+            sizes: '540x361',
+            type: 'image/png',
+            form_factor: 'narrow'
           }
         ]
       }
