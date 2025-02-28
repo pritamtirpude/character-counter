@@ -1,6 +1,8 @@
 import useTheme from '@/hooks/useTheme';
 import iconMoon from '/assets/icon-moon.svg';
 import iconSun from '/assets/icon-sun.svg';
+import { AnimatePresence, motion } from 'motion/react';
+import { animationVariant } from '@/lib/animation';
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -15,14 +17,19 @@ const ThemeSwitcher = () => {
 
   return (
     <button
-      className="flex size-11 flex-col items-center justify-center rounded-lg bg-counter-neutral-400 dark:bg-counter-neutral-700"
+      className="flex size-11 flex-col items-center justify-center overflow-hidden rounded-lg bg-counter-neutral-400 dark:bg-counter-neutral-700"
       onClick={handleTheme}
     >
-      {theme === 'light' ? (
-        <img src={iconMoon} alt="moon icon" />
-      ) : (
-        <img src={iconSun} alt="sun icon" />
-      )}
+      <AnimatePresence mode="wait" initial={false}>
+        {theme && (
+          <motion.img
+            key={theme}
+            {...animationVariant(0.25)}
+            src={theme === 'light' ? iconMoon : iconSun}
+            alt="icon"
+          />
+        )}
+      </AnimatePresence>
     </button>
   );
 };
