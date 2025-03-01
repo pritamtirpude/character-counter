@@ -93,9 +93,10 @@ export default tseslint.config({
 
 Here are some screenshots of the application:
 
-![Screenshot 1](/light_mode.png)
+![char-count-pwa-app vercel app_](https://github.com/user-attachments/assets/8b7e11ad-1f8e-43a6-b2e2-6dd366ac8ca4)
 
-![Screenshot 2](/dark_mode.png)
+![char-count-pwa-app vercel app_ (1)](https://github.com/user-attachments/assets/edcc2728-ca7a-4bd5-a895-7dff8d27e2c5)
+
 
 ## Contributing
 
