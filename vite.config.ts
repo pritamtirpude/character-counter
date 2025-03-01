@@ -64,7 +64,7 @@ export default defineConfig({
         short_name: 'CharCount',
         start_url: '/',
         theme_color: '#c27cf8',
-        background_color: '#ffffff',
+        background_color: '#d29efa',
         scope: '/',
         display: 'standalone',
         icons: [
