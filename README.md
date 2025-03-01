@@ -11,6 +11,7 @@ This project is a character counter application built with React, TypeScript, an
 - **Letter Density**: Calculates the density of each letter in the input text and displays the percentage of each letter's occurrence.
 - **Exclude Spaces**: Option to exclude spaces from the character count.
 - **Set Character Limit**: Option to set a character limit for the input text.
+- **PWA Support**: The application can be installed as a Progressive Web App for offline use.
 
 ## Installation
 
@@ -41,6 +42,10 @@ npm run build
 ```
 
 The built files will be available in the `dist` directory.
+
+## PWA Support
+
+This application is configured as a Progressive Web App (PWA). To enable PWA support, ensure that the `vite-plugin-pwa` plugin is configured correctly in your `vite.config.ts` file. The application will prompt users to install it as a PWA when they visit the site.
 
 ## Expanding the ESLint Configuration
 
@@ -83,6 +88,14 @@ export default tseslint.config({
   }
 });
 ```
+
+## Screenshots
+
+Here are some screenshots of the application:
+
+![Screenshot 1](/light_mode.png)
+
+![Screenshot 2](/dark_mode.png)
 
 ## Contributing
 
