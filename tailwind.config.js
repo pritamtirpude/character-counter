@@ -63,7 +63,7 @@ export default {
         'theme-light': `url('/assets/bg-light-theme.png')`,
         'pattern-character': `url('/assets/pattern-character-count.svg')`,
         'pattern-word-count': `url('/assets/pattern-word-count.svg')`,
-        'pattern-sentence-count': `url('assets/pattern-sentence-count.svg')`
+        'pattern-sentence-count': `url('/assets/pattern-sentence-count.svg')`
       },
       fontSize: {
         'Heading-64': [

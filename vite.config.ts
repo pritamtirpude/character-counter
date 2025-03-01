@@ -13,6 +13,47 @@ export default defineConfig({
       devOptions: {
         enabled: true
       },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,png,jpg,svg,woff2}'],
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/your-api\.com\/.*/, // Cache API responses if needed
+            handler: 'NetworkFirst', // Try network first, then fallback to cache
+            options: {
+              cacheName: 'api-cache',
+              expiration: {
+                maxEntries: 50, // Keep only 50 API responses
+                maxAgeSeconds: 24 * 60 * 60 // Cache for 1 day
+              }
+            }
+          },
+          {
+            urlPattern: /\.(?:png|jpg|jpeg|svg|gif|webp)$/, // Cache images
+            handler: 'CacheFirst', // Serve from cache first
+            options: {
+              cacheName: 'image-cache',
+              expiration: {
+                maxEntries: 100,
+                maxAgeSeconds: 30 * 24 * 60 * 60 // Cache for 30 days
+              }
+            }
+          },
+          {
+            urlPattern: /.*\.js$/, // Cache JavaScript files
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'js-cache'
+            }
+          },
+          {
+            urlPattern: /.*\.css$/, // Cache CSS files
+            handler: 'StaleWhileRevalidate',
+            options: {
+              cacheName: 'css-cache'
+            }
+          }
+        ]
+      },
       includeAssets: [
         'favicon.ico',
         'apple-touch-icon.png',
