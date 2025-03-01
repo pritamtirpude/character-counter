@@ -18,7 +18,7 @@ This project is a character counter application built with React, TypeScript, an
 To get started with the project, clone the repository and install the dependencies:
 
 ```sh
-git clone https://github.com/your-username/character-counter.git
+git clone https://github.com/pritamtirpude/character-counter.git
 cd character-counter
 npm install
 ```
@@ -117,4 +117,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-If you have any questions or feedback, please feel free to contact me at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or feedback, please feel free to contact me at [pritam.tirpude9601@gmail.com](mailto:pritam.tirpude9601@gmail.com).
